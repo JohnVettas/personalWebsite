@@ -1,0 +1,27 @@
+/* Makes the background black and text green */
+.terminal-window {
+  background-color: #0c0c0c;
+  color: #20C20E; /* Classic terminal green */
+  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Keeps the prompt text and the input on the same line */
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+/* The Invisible Input */
+.invisible-input {
+  background: transparent; /* No white background */
+  border: none; /* No box outline */
+  color: inherit; /* Uses the green color from .terminal-window */
+  font-family: inherit; /* Uses the monospace font */
+  font-size: 1rem;
+  outline: none; /* Removes the blue focus ring */
+  flex-grow: 1; /* Makes the input stretch to the end of the screen */
+  margin-left: 10px;
+}
