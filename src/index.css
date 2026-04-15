@@ -1,19 +1,30 @@
 body{
-  background-color: rgb(22, 22, 22);
+  background-color: rgb(255, 255, 255);
 }
 
-.mainText, .subText{
-  font-size: 20px;
-  color: rgb(0, 128, 0);
+.bigNav{
+  background-color: rgb(1, 1, 71);
 }
 
-.cursor {
-  animation: blink 1s step-start infinite;
+.bigNav ul {
+    display: flex;             /* This aligns items in a row */
+    list-style-type: none;     /* Removes the bullet points */
+    margin: 0;
+    padding: 20px;
+    background-color: #222;    /* Makes the bar visible */
 }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
+.bigNav li {
+    margin-right: 40px;        /* Adds space between the links */
 }
 
+.navItems-Left{
+  color: azure;
+  text-decoration: none;     /* Removes the underline */
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.navItems-Left:hover{
+  color: #00bcd4;
+}
