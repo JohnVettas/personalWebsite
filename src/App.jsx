@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import BigNav from './header';
+import BigNav from './navbar.jsx';
+import {Home} from './home.jsx';
 
 function App() {
 	// const [hasStarted, setHasStarted] = useState(false);
@@ -8,7 +9,10 @@ function App() {
 
 
 	return (
-		<BigNav></BigNav>
+		<>
+			<BigNav></BigNav>
+			<Home></Home>
+		</>
 	)
 }
 
