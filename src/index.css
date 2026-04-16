@@ -15,6 +15,10 @@ body {
     padding: 0 40px;
     background-color: #1a1a1a; /* Darker, more professional black */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    position: sticky;      /* Makes it follow the scroll */
+    top: 0;               /* Pins it to the very top of the screen */
+    z-index: 1000;
 }
 
 .bigNav ul {
@@ -41,7 +45,7 @@ body {
 }
 
 /* 3. Section Header */
-#home-text {
+.titles-links {
     margin: 40px 0 20px 5%;
     font-size: 32px;
     font-weight: 800;
@@ -113,4 +117,79 @@ body {
 #about-me-text{
   font-size: 20px;
   font-weight: bold;
+}
+
+#skill-div {
+    display: flex;
+    flex-direction: column;   /* Stacks title (3) above content area (4) */
+    width: 90%;               /* Adjusts the overall size of the card */
+    /* max-width: 1000px;        Prevents it from getting too wide on large screens */
+    margin: 40px auto;        /* Centers the entire card on the screen */
+    border: 3px solid black;  /* Matches the black outline in the picture */
+    background-color: white;  /* Clear background for the card content */
+    overflow: hidden;         /* Keeps content inside the border */
+}
+
+/* -- 3: The Title Area (Yellow Border Area) -- */
+#title-skills {
+    padding: 15px 25px;       /* Spacing inside the title bar */
+    border-bottom: 2px solid #ccc; /* Optional slight divider */
+}
+
+#title-skills p {
+    margin: 0;                /* Removes default paragraph spacing */
+    font-size: 28px;
+    text-transform: uppercase; /* Makes "Title" stand out */
+    letter-spacing: 2px;
+    color: #333;
+}
+
+/* -- 4: The Main Content Row (Blue Border Area) -- */
+#skills {
+    display: flex;            /* Crucial: places (5) and (6) side-by-side */
+    flex-direction: row;      /* Horizontally aligns items */
+    align-items: stretch;     /* Ensures both columns are the same height */
+}
+
+/* -- 5: The Skill Text (Purple Border Area) -- */
+#skill-text {
+    flex: 2;                  /* Takes up 2 parts of the available width */
+    padding: 30px;            /* Generous padding for readability */
+    font-size: 18px;
+    line-height: 1.8;         /* Comfortable line spacing */
+    color: #555;
+    border-right: 2px solid #ccc; /* Subtle separator from the buttons */
+}
+
+/* -- 6: The Skill Buttons Column (Magenta/Pink Border Area) -- */
+#skill-buttons {
+    flex: 1;                  /* Takes up 1 part of the width (makes it smaller than text) */
+    display: flex;            /* Turns column (6) into a vertical stack */
+    flex-direction: column;   /* Stacks children vertically */
+    justify-content: center;  /* Centers the button group vertically */
+    align-items: center;      /* Centers the individual buttons horizontally */
+    gap: 15px;                /* Modern space between items */
+    padding: 30px;
+    min-width: 200px;         /* Prevents column from squishing too much */
+}
+
+/* -- 7: The Individual Skill Buttons (Red Box Area) -- */
+.skill-btn {
+    width: 100%;              /* Stretches buttons to full width of column (6) */
+    max-width: 180px;         /* Prevents them from being too wide */
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #00bcd4; /* Accent color */
+    border: 2px solid #00acc1;
+    border-radius: 8px;       /* Modern rounded look */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* -- (but): The hover state for buttons -- */
+.skill-btn:hover {
+    background-color: #0097a7; /* Darker teal on hover */
+    transform: translateY(-2px); /* Slight 'pop' effect */
 }

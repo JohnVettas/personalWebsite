@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import BigNav from './navbar.jsx';
-import {Home} from './home.jsx';
+import {Home, Skills} from './home.jsx';
 
 function App() {
 	// const [hasStarted, setHasStarted] = useState(false);
@@ -12,6 +12,7 @@ function App() {
 		<>
 			<BigNav></BigNav>
 			<Home></Home>
+			<Skills></Skills>
 		</>
 	)
 }
