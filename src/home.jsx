@@ -33,7 +33,7 @@ export function Home()
                     </div>
                 </div>
                 <div id='face-name'>
-                    <img id = "my-face" src={headshot} alt = "GitHub" width="500"></img>
+                    <img id="my-face" src={headshot} alt="Ioannis Vettas"></img>
                     <div><p id = "my-name"><b>Ioannis Vettas</b></p></div>
                     <div><p id = "my-profecion"><b>Aspiring Web Developer | Full Stack</b></p></div>
                 </div>

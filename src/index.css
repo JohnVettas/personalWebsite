@@ -58,8 +58,12 @@ body {
 .mainDivBody {
     display: flex;
     width: 100%;
-    min-height: 80vh; /* Takes most of the screen */
-    background-color: #ffffff; /* Clean white background */
+    box-sizing: border-box; /* Ensures padding doesn't widen the screen */
+    padding: 0 5%; /* Adds exactly 5% space on left and right */
+    min-height: 50vh; /* Takes most of the screen */
+    background-color: transparent;
+    
+    
 }
 
 .mainDivBody > div {
@@ -86,15 +90,20 @@ body {
 #face-name {
     flex-direction: column;
     text-align: center;
-    background-color: #f0f2f5; /* Subtle contrast for the photo side */
+    flex: 1;
+    padding: 0;
+    padding-left:100px;
+    justify-content: flex-start;
 }
 
 #my-face {
     border: 5px solid white;
-    border-radius: 20px; /* Rounded corners look much better than sharp ones */
+    border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     margin-bottom: 20px;
     object-fit: cover;
+    max-width: 100%; /* Add this to prevent mobile overflow */
+    height: auto;    /* Add this to maintain aspect ratio */
 }
 
 #my-name {
@@ -112,6 +121,10 @@ body {
 
 #about-me-div{
   flex-direction: column;
+  flex: 2;
+  padding: 0;
+  padding-right:100px;
+  justify-content: flex-start;
 }
 
 #about-me-text{
@@ -192,4 +205,97 @@ body {
 .skill-btn:hover {
     background-color: #0097a7; /* Darker teal on hover */
     transform: translateY(-2px); /* Slight 'pop' effect */
+}
+
+
+
+
+/* TABLETS & SMALL DESKTOPS (Max width: 992px) */
+@media (max-width: 992px) {
+    /* Stack the About Me and Profile Photo */
+    .mainDivBody {
+        flex-direction: column-reverse; /* Puts the photo above the text */
+        
+    }
+
+    #face-name {
+        padding-left: 0;
+    }
+
+    #about-me-div {
+        padding-right: 0;
+    }
+    
+    .mainDivBody > div {
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Stack the Skills Text and Buttons */
+    #skills {
+        flex-direction: column;
+    }
+
+    #skill-text {
+        border-right: none;
+        border-bottom: 2px solid #ccc; /* Move border from right to bottom */
+    }
+
+    /* Make the skill buttons sit side-by-side on tablets */
+    #skill-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .skill-btn {
+        flex: 1;
+        min-width: 120px;
+    }
+}
+
+/* MOBILE PHONES (Max width: 768px) */
+@media (max-width: 768px) {
+    /* Stack the Navigation Bar */
+    .bigNav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+
+    .bigNav ul {
+        padding: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bigNav li {
+        margin: 5px 10px;
+    }
+
+    /* Center Align Titles on Mobile */
+    .titles-links {
+        text-align: center;
+        margin: 30px 0 20px 0;
+    }
+
+    #title-skills p {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    /* Adjust Typography for smaller screens */
+    #my-name {
+        font-size: 32px;
+    }
+
+    #my-profecion {
+        font-size: 18px;
+    }
+
+    #about {
+        font-size: 16px;
+        padding: 20px;
+    }
 }
