@@ -1,4 +1,4 @@
-import dsImage from './assets/dsUnis.png';
+import dsImage from './assets/dsUniS.png';
 import weatherImage from './assets/weather-app.png';
 
 
