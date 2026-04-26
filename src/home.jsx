@@ -61,7 +61,7 @@ export function Skills(){
                 <div id = "skills">
                     <div id='skill-text'>
                         {selectedSkill === 'Frontend' && (
-                            <div style={{ padding: '25px 30px', fontSize: '18px', lineHeight: '1.8', color: '#444' }}>
+                            <div className='difrent-skills-div' style={{ padding: '25px 30px', fontSize: '18px', lineHeight: '1.8', color: '#444' }}>
                                 I have a strong foundation in frontend development, specializing in building responsive and dynamic user interfaces. 
                                 
                                 <p style={{ marginTop: '20px', marginBottom: '5px' }}><b>My Core Stack:</b></p>
@@ -73,7 +73,7 @@ export function Skills(){
                             </div>
                         )}
                         {selectedSkill === 'Backend' && (
-                            <div style={{ padding: '25px 30px', fontSize: '18px', lineHeight: '1.8', color: '#444' }}>
+                            <div className='difrent-skills-div' style={{ padding: '25px 30px', fontSize: '18px', lineHeight: '1.8', color: '#444' }}>
                                 I possess solid backend development skills, focusing on server-side architecture and databases.
                                 
                                 <p style={{ marginTop: '20px', marginBottom: '5px' }}><b>My Core Stack:</b></p>
@@ -85,7 +85,7 @@ export function Skills(){
                             </div>
                         )}
                         {selectedSkill === 'Cloud' && (
-                            <div style={{ padding: '25px 30px', fontSize: '18px', lineHeight: '1.8', color: '#444' }}>
+                            <div className='difrent-skills-div' style={{ padding: '25px 30px', fontSize: '18px', lineHeight: '1.8', color: '#444' }}>
                                 My experience extends to modern deployment, cloud services, and infrastructure management.
                                 
                                 <p style={{ marginTop: '20px', marginBottom: '5px' }}><b>My Core Stack:</b></p>
@@ -97,7 +97,7 @@ export function Skills(){
                             </div>
                         )}
                         {selectedSkill === 'Others' && (
-                            <div style={{ padding: '25px 30px', fontSize: '18px', lineHeight: '1.8', color: '#444' }}>
+                            <div className='difrent-skills-div' style={{ padding: '25px 30px', fontSize: '18px', lineHeight: '1.8', color: '#444' }}>
                                 Beyond web development, I have a diverse technical skill set spanning data processing, AI, and cybersecurity.
                                 
                                 <p style={{ marginTop: '20px', marginBottom: '5px' }}><b>My Core Stack:</b></p>

@@ -1,10 +1,33 @@
+import { useState, useEffect } from 'react';
 import githubLogo from './assets/github.svg';
 import cvLogo from './assets/cv.svg';
 import linkedinLogo from './assets/linkedin.svg';
 
 export default function BigNav() {
+
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            // If scrolling down AND past the very top, hide it. Otherwise, show it.
+            if (currentScrollY > lastScrollY && currentScrollY > 50) {
+                setIsVisible(false);
+            } else {
+                setIsVisible(true);
+            }
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollY]);
+
+
     return(
-        <nav className="bigNav">
+        <nav className={`bigNav transition-transform duration-300 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'} `}>
             <ul>
                 <li><a href="#home" className="navItems-Left">Home</a></li>
                 <li><a href="#skills" className="navItems-Left">Skills</a></li>

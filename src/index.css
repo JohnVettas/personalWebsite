@@ -263,42 +263,72 @@ body {
     /* Stack the Navigation Bar */
     .bigNav {
         flex-direction: column;
-        padding: 15px;
+        padding: 10px; /* Reduced from 15px */
     }
 
-
+    /* 2. Remove the extra vertical padding on the lists */
     .bigNav ul {
-        padding: 10px 0;
+        padding: 0; 
+        margin: 5px 0; /* Tighter gap between the text links and the icons */
         flex-wrap: wrap;
         justify-content: center;
     }
 
+    /* 3. Shrink the gaps between items */
     .bigNav li {
-        margin: 5px 10px;
+        margin: 0px 8px; /* Reduced from 5px 10px */
     }
 
-    /* Center Align Titles on Mobile */
-    .titles-links {
-        text-align: center;
-        margin: 30px 0 20px 0;
+    .navItems-Left {
+        font-size: 15px; /* Reduced from 18px */
     }
+
+    .difrent-skills-div {
+        border: 0; /* Remove borders for mobile */
+        padding: 4px !important;
+        font-size: 16px; /* Reduced from 18px */
+    }
+
 
     #title-skills p {
-        text-align: center;
-        font-size: 24px;
+        font-size: 20px; /* Reduced from 24px */
     }
-
     /* Adjust Typography for smaller screens */
     #my-name {
-        font-size: 32px;
+        font-size: 26px; /* Reduced from 32px */
     }
 
     #my-profecion {
-        font-size: 18px;
+        font-size: 16px; /* Reduced from 18px */
     }
 
     #about {
-        font-size: 16px;
-        padding: 20px;
+        font-size: 14px; /* Reduced from 16px */
+        padding: 15px; /* Reduced from 20px */
+        line-height: 1.6; /* Tighter line spacing */
+    }
+
+    .mainDivBody > div {
+        padding: 10px; /* Reduced from 20px */
+    }
+
+    #skill-text {
+        padding: 15px; /* Reduced padding inside the text box */
+        font-size: 14px; /* Smaller text */
+    }
+
+    #skill-buttons {
+        padding: 10px; /* Reduced padding */
+        gap: 10px; /* Tighter gap between buttons */
+    }
+
+    .skill-btn {
+        padding: 8px 12px; /* Thinner buttons */
+        font-size: 14px;
+    }
+
+    #skill-div {
+        margin: 20px auto; /* Reduced vertical margin */
+        width: 95%; /* Make it slightly wider on mobile to fit more text */
     }
 }
