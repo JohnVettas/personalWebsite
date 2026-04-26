@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import githubLogo from './assets/github.svg';
 import cvLogo from './assets/cv.svg';
 import linkedinLogo from './assets/linkedin.svg';
+import cv from './assets/Ioannis_Vettas_Web_cv.pdf';
 
 export default function BigNav() {
 
@@ -38,7 +39,7 @@ export default function BigNav() {
             <ul>
                 <li><a href='https://github.com/JohnVettas'><img src={githubLogo} alt = "GitHub" width="30" height="30"></img></a></li>
                 <li><a href='https://www.linkedin.com/in/ioannis-vettas-228442322/'><img src={linkedinLogo} alt = "LinkedIn" width="30" height="30"></img></a></li>
-                <li><a href='https://github.com/JohnVettas'><img src={cvLogo} alt = "DownloadCV" width="30" height="30"></img></a></li>
+                <li><a href={cv} download="Ioannis_Vettas_CV.pdf"><img src={cvLogo} alt="Download CV" width="30" height="30" /></a></li>
                 
             </ul>
         </nav>

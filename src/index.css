@@ -286,8 +286,10 @@ body {
     .difrent-skills-div {
         border: 0; /* Remove borders for mobile */
         padding: 4px !important;
-        font-size: 16px; /* Reduced from 18px */
+        font-size: 14px !important; /* Reduced from 18px */
     }
+
+    
 
 
     #title-skills p {
