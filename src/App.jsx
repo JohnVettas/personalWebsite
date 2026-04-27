@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+import './index.css';
 import BigNav from './navbar.jsx';
 import {Home, Skills} from './home.jsx';
 import {Education, Projects} from './edprab.jsx';
