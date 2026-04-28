@@ -60,13 +60,13 @@ body {
 /* 4. Main Body Layout */
 .mainDivBody {
     display: flex;
+    justify-content: center;
+    align-items: center; /* Centers items vertically */
     width: 100%;
-    box-sizing: border-box; /* Ensures padding doesn't widen the screen */
-    padding: 0 5%; /* Adds exactly 5% space on left and right */
-    min-height: 50vh; /* Takes most of the screen */
+    box-sizing: border-box; 
+    padding: 0 5%; 
+    min-height: 50vh; 
     background-color: transparent;
-    
-    
 }
 
 .mainDivBody > div {
