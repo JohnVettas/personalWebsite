@@ -5,28 +5,28 @@ import linkedinLogo from './assets/linkedin.svg';
 import cv from './assets/Ioannis_Vettas_Web_cv.pdf';
 
 export default function BigNav() {
-
+    
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+     if (window.innerWidth < 767 || window.scrollY !== 0) {
+        useEffect(() => {
+            const handleScroll = () => {
+                const currentScrollY = window.scrollY;
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
+                // If scrolling down AND past the very top, hide it. Otherwise, show it.
+                if (currentScrollY > lastScrollY && currentScrollY > 50) {
+                    setIsVisible(false);
+                } else {
+                    setIsVisible(true);
+                }
+                setLastScrollY(currentScrollY);
+            };
 
-            // If scrolling down AND past the very top, hide it. Otherwise, show it.
-            if (currentScrollY > lastScrollY && currentScrollY > 50) {
-                setIsVisible(false);
-            } else {
-                setIsVisible(true);
-            }
-            setLastScrollY(currentScrollY);
-        };
+            window.addEventListener('scroll', handleScroll);
+            return () => window.removeEventListener('scroll', handleScroll);
+        }, [lastScrollY]);
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [lastScrollY]);
-
-
+    }
     return(
         <nav className={`bigNav transition-transform duration-300 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'} `}>
             <ul>
