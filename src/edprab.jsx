@@ -1,5 +1,6 @@
 import dsImage from './assets/dsUniS.png';
-import weatherImage from './assets/weather-app.png';
+import weatherImage from './assets/weather-app.png'
+import gasApp from './assets/gasApp.jpg';
 
 export function Education() {
     return (
@@ -110,6 +111,32 @@ export function Projects() {
                             src={weatherImage}
                             alt="Weather App"
                             className="max-w-full h-auto object-contain border-2 border-[#00bcd4] rounded-lg shadow-md"
+                        />
+                    </div>
+                </div>
+
+                <h1 className="text-2xl md:text-4xl border-b-2 border-gray-500/50 pb-2"><b>Gas Tracking Mobile App</b></h1>
+                <div className="pb-2 border-b-3 pt-4 md:pt-6 grid grid-cols-1 min-[1300px]:grid-cols-[40%_60%]">
+
+                    <div className="min-[1300px]:border-r-2 border-gray-500/50 pb-6 min-[1300px]:pb-0 min-[1300px]:pr-6">
+                        <p className="mb-4">
+                            <b>Gas Tracking App</b> is a mobile application designed to help users track their gas consumption and expenses. 
+                            Every time a user goes to a gas station to add gas to their vehicle, they can log the transaction and view their spending history and other statistics the app 
+                            calculates. <a href="https://github.com/JohnVettas/GasTrackingApp" className="text-blue-500 hover:underline">(Github Repo) </a>
+                        </p>
+                        <ul className="pb-4 space-y-2 list-disc list-inside pl-1 md:pl-2">
+                            <li>Implemented a simple interface for logging gas transactions.</li>
+                            <li>Utilized Expo and React Native for mobile development.</li>
+                            <li>All data gets saved to async storage meaning it's very lightweight without a user for users and a database.</li>
+                        </ul>
+                    </div>
+
+                    <div className="flex items-center justify-center mt-4 min-[1300px]:mt-0 min-[1300px]:pl-3 min-w-0">
+                        <img
+                            id="project1"
+                            src={gasApp}
+                            alt="Gas Tracking App"
+                            className="max-w-full max-h-[600px] object-contain border-2 border-[#00bcd4] rounded-lg shadow-md"
                         />
                     </div>
                 </div>

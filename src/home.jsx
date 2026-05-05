@@ -68,7 +68,7 @@ export function Skills(){
                                 <ul style={{ margin: '0', paddingLeft: '20px' }}>
                                     <li><b>HTML & CSS & Tailwind:</b> Structuring and styling modern layouts.</li>
                                     <li><b>JavaScript & TypeScript:</b> Writing robust, interactive, and type-safe logic.</li>
-                                    <li><b>React :</b> Utilizing component-based architecture for dynamic web apps.</li>
+                                    <li><b>React & React-Native :</b> Utilizing component-based architecture for dynamic web and mobile app development.</li>
                                 </ul>
                             </div>
                         )}
